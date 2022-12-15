@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TC002_Post_Request">
+      <class name="postmanAPItesting.AssertDemoAPI">
         <methods>
-          <include name="postRequest"/>
+          <include name="getWeatherDetail"/>
         </methods>
-      </class> <!-- TC002_Post_Request -->
+      </class> <!-- postmanAPItesting.AssertDemoAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

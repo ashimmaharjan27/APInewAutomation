@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4895" started-at="2022-12-14T21:37:41 CST" finished-at="2022-12-14T21:37:46 CST">
+  <suite name="Default suite" duration-ms="4761" started-at="2022-12-15T16:45:25 CST" finished-at="2022-12-15T16:45:29 CST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4895" started-at="2022-12-14T21:37:41 CST" finished-at="2022-12-14T21:37:46 CST">
-      <class name="T002_01_Post_Request">
-        <test-method status="PASS" signature="postRequest()[pri:0, instance:T002_01_Post_Request@59e5ddf]" name="postRequest" is-config="true" duration-ms="3805" started-at="2022-12-14T21:37:41 CST" finished-at="2022-12-14T21:37:45 CST">
+    <test name="Default test" duration-ms="4761" started-at="2022-12-15T16:45:25 CST" finished-at="2022-12-15T16:45:29 CST">
+      <class name="postmanAPItesting.AssertDemoAPI">
+        <test-method status="PASS" signature="getWeatherDetail()[pri:0, instance:postmanAPItesting.AssertDemoAPI@536aaa8d]" name="getWeatherDetail" duration-ms="4697" started-at="2022-12-15T16:45:25 CST" finished-at="2022-12-15T16:45:29 CST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postRequest -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:T002_01_Post_Request@59e5ddf]" name="test1" duration-ms="1025" started-at="2022-12-14T21:37:45 CST" finished-at="2022-12-14T21:37:46 CST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-      </class> <!-- T002_01_Post_Request -->
+        </test-method> <!-- getWeatherDetail -->
+      </class> <!-- postmanAPItesting.AssertDemoAPI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
