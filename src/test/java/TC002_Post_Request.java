@@ -44,6 +44,11 @@ public class TC002_Post_Request {
     		String name =  response.jsonPath().get("name");
     		System.out.println("name is : " + name);
     		Assert.assertEquals(name, "Krishna Rungta");
+    		
+    		//username verification
+    		String username =  response.jsonPath().get("username");
+    		System.out.println("Username is : " + name);
+    		Assert.assertEquals(username, "Bret");
 		
 	}
 
