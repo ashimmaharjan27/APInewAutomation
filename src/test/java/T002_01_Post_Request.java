@@ -20,7 +20,7 @@ public class T002_01_Post_Request {
 		RequestSpecification httprequest = RestAssured.given();
 
 		JSONObject requestParams = new JSONObject();
-
+			
 		requestParams.put("id", 11);
 		requestParams.put("name", "Krishna Rungta");
 		requestParams.put("username", "Bret");
@@ -28,8 +28,9 @@ public class T002_01_Post_Request {
 		requestParams.put("phone", "1-770-736-8031 x56442");
 		requestParams.put("website", "hildegard.org");
 
+		String requestparm = requestParams.toJSONString();
 		httprequest.header("Content-Type", "application/json");
-		httprequest.body(requestParams.toJSONString());
+		httprequest.body(requestparm);
 
 		response = httprequest.request(Method.POST, "/users");
 
@@ -52,7 +53,7 @@ public class T002_01_Post_Request {
 
 		// username verification
 		String username = response.jsonPath().get("username");
-		System.out.println("Username is : " + name);
+		System.out.println("Username is : " + username);
 		Assert.assertEquals(username, "Bret");
 	}
 

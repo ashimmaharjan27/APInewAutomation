@@ -2,6 +2,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -19,15 +21,14 @@ public class TC001_Get_Request {
 		RequestSpecification httprequest = RestAssured.given();
 
 		// Response object
-		Response response = httprequest.request(Method.GET, "/users");
+		Response response = httprequest.request(Method.GET, "/users/1");
 
 		// Print response in console
 		String responsebody = response.getBody().asString();
 		System.out.println("Respose Body is" + responsebody);
-		
-		 responsebody.contains("name");
-		 
-		   		  
+
+		responsebody.contains("name");
+
 		// status code Validation
 		int statusCode = response.getStatusCode();
 		System.out.println("Status code is : " + statusCode);
@@ -42,14 +43,19 @@ public class TC001_Get_Request {
 		String name = response.jsonPath().get("name");
 		System.out.println("name is : " + name);
 		Assert.assertEquals(name, "Leanne Graham");
-		
-		String contentType = response.header("Content-Type");
-		System.out.println(contentType);
-		
-		String contentEncoding = response.header("Content-Encoding");
-		System.out.println(contentEncoding);
-		
 
+		String contentType = response.header("Content-Type");
+		System.out.println("contentType : " + contentType);
+
+		String contentEncoding = response.header("Content-Encoding");
+		System.out.println("contentEncoding : " + contentEncoding);
+
+		Headers allheader = response.headers();// capture all the header
+
+		for (Header header : allheader) {
+
+			System.out.println(header.getName() + " : " + header.getValue());
+		}
 	}
 
 }
