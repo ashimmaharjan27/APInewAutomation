@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -12,7 +13,8 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class DataDrivenAPITestFromExcel {
+@Listeners(CustomListener.class)
+public class DataDrivenAPITestFromExcel extends BaseClass{
 
 	@Test(dataProvider = "empdataprovider")
 	void postNewEmployee(String ename, String eage, String esalary) {
